@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Montserrat&family=Open+Sans:wght@300&family=Raleway:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #0f1213;
+    text-decoration: none;
+}
+
+footer{
+    background-color: rgb(250, 241, 241);
+   height: auto;
+   width: 100vw;
+   padding-top: 20px;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3{
+    font-size: 2rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    line-height: 3rem;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 15px;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li{
+    margin: 0 10px;
+}
+
+.socials a{
+    text-decoration:  none;
+    color: black;
+    cursor: pointer;
+}
+
+.socials a fa-icon{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+
+.footer-bottom{
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+    background-color: rgb(251, 223, 223);
+}
+
+.footer-bottom p{
+    font-size: 15px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}

@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Montserrat&family=Open+Sans:wght@300&family=Raleway:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #0f1213;
+    text-decoration: none;
+}
+
+html{
+    font-size: 16px;
+}
+
+.search-box{
+    position: absolute;
+    z-index: 1;
+    top:350px;
+    width:60%;
+    margin-left: 340px;
+}
+
+h3{
+    font-size: 30px;
+    color: white;
+    margin-bottom: 10px;
+    margin-right: 100px;
+}
+.box{
+    width: 500px;
+    height: 50px;
+    background-color: white;
+    border-radius: 30px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.box > fa-icon{
+    font-size: 24px;
+    color: #777;
+    margin-right: 10px;
+}
+
+.box > input{
+    flex:1;
+    height: 40px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+img{
+    height: 70vh;
+    width: 100%;
+    filter: blur(1px);
+}
+
+  
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+
+li a{
+    height: 27rem;
+    width: 22rem;
+    border: 1px solid whitesmoke;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: #e72929;
+}
+
+li a img{
+    height: 15rem;
+}
+
+li a:hover{
+    opacity: .9  ;
+    cursor: pointer;
+}
+
+ngb-rating {
+    color: #2e250a;
+    font-size: 20px;
+}
+
+.content{
+    padding: 1rem 1rem;
+}
+
+.name{
+    margin: .5rem .3rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    float: left;
+}
+
+.rating{
+    clear: both;
+    margin: .5rem .2rem;
+}
+
+.star{
+    font-size: 20px;
+}
+
+.filled{
+    color: red;
+}
+
+.notfilled{
+    color:#dcc3c3;
+}
+
+.category{
+    margin: .5rem .5rem;
+    float: left;
+}
+
+.cook-time{
+    float: right;
+    margin-top: .5rem;
+    margin-right: .3rem;
+    font-size: .9rem;
+}
+
+.price{
+    clear: both;
+    margin-top: .5rem;
+    margin-left: .5rem;
+    color: #414141;
+    margin-top: .7rem;
+}

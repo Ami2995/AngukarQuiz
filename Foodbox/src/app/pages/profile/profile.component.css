@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Montserrat&family=Open+Sans:wght@300&family=Raleway:wght@300&display=swap');
+*{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #0f1213;
+    text-decoration: none;
+}
+
+.table{
+    width: 70%;
+    margin-top: 20px;
+}
+
+.table tr td{
+    padding: 15px 12px;
+    text-align: center;
+}
+
+p{
+    font-size: 25px;
+    font-weight: 200px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.key{
+    font-size: 17px;
+    font-weight: 1100;
+    text-transform: uppercase;
+}
+
+.btn{
+    background-color: brown;
+    color: white;
+    margin-left: 350px;
+    width: 100px;
+    border-radius: 60px;
+    box-shadow: 1px red;
+}
+
+.btn:hover{
+    background-color: red;
+}

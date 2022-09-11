@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Montserrat&family=Open+Sans:wght@300&family=Raleway:wght@300&display=swap');
+*{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #0f1213;
+    text-decoration: none;
+}
+a{
+    color: blue;
+    font-weight: 1000;
+}
+
+ .msg {
+   border: none;
+   outline: none;
+   font-size: 14px;
+   color: red;
+}
+
+h3{
+    font-size: 30px;
+    font-weight: 1000;
+}
+
+.btn{
+    height: 50px;
+    width: 20%;
+    border: none;
+    outline: none;
+    border-radius: 60px;
+    font-weight: 600;
+    background: brown;
+    color: white;
+}
+
+.btn:hover{
+    background: #dd0808;
+}
+
+a:hover{
+    font-size: 25px;
+    font-weight: 600;
+}
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #f093fb;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to bottom right, rgb(249, 239, 251), rgb(242, 246, 247));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to bottom right, rgb(249, 239, 251), rgb(242, 246, 247))
+    }
+    
+    .card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    }
+    .card-registration .select-arrow {
+    top: 13px;
+    }

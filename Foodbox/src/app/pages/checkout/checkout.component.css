@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Montserrat&family=Open+Sans:wght@300&family=Raleway:wght@300&display=swap');
+*{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #0f1213;
+    text-decoration: none;
+}
+
+.container{
+    margin: 20px auto;
+    padding: 2rem;
+    overflow: hidden;
+    border: 0 !important;
+    border-radius: 20px !important;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.details{
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+    max-height: 25rem;
+}
+
+h4{
+    font-size: 2rem;
+    font-weight: bolder;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+label{
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+input{
+   height: 2.5rem;
+   border: 1px solid rgb(216, 141, 141);
+   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+   border-radius: 5px;
+}
+
+select{
+    height: 2.5rem;
+    border: 1px solid rgb(216, 141, 141);
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.cart{
+    font-size: 2rem;
+}
+.quantity{
+    font-size: 2rem;
+}
+
+.msg{
+    font-size: 15px;
+    color: red;
+    margin-top: 5px;
+}
+
+button{
+    justify-content: center;
+    background-color: brown;
+    color: white;
+    border-radius: 2rem;
+}

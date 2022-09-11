@@ -1,0 +1,66 @@
+
+<app-title title="Your Cart" margin="1.5rem 0 0 2.5rem"></app-title>
+<app-not-found
+    [visible]="!cart || !cart.items.length"
+    notFoundMessage= "Cart Is Empty."
+    resetLinkText= "lets ! Grab Some Food !"
+></app-not-found>
+<div class="container" *ngIf="cart && cart.items.length">
+    <ul>
+        <li  *ngFor="let cartItems of cart.items">
+            <div>
+                <img [src]="cartItems.imageUrl" alt="{{cartItems.name}}">
+            </div>
+            <div>
+                <a routerLink="/shop/{{cartItems.id}}">
+                    {{cartItems.food.foodName}}
+                </a>
+            </div>
+            <div>
+                <select #quantity [value]="cartItems.quantity" 
+                [disabled]="true">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            </select>
+            </div>
+           <div>
+            {{cartItems.price | currency:'INR':'symbol-narrow'}}
+           </div>
+           <div>
+            <button class="remove-button" (click)="removeItem(cartItems)"><fa-icon class="icon" [icon]="delete"></fa-icon></button>
+           </div>
+        </li>
+        <li>
+         <div>
+            <button class="add" routerLink="/home">Add More Items</button>
+         </div>
+        </li>
+    </ul>
+    
+
+
+    <div class="checkout">
+        
+        <div>
+            <h2>Amount Payable</h2>
+        <div class="total">
+            <ul class="list-group list-group-flush">
+                <li>Item total
+                    <span>{{ cart.totalPrice | currency:'INR':'symbol-narrow'}}</span>
+                </li>
+                <li>Delivery charge
+                    <span>{{ deliveryCharge | currency:'INR':'symbol-narrow'}}</span>
+                </li>
+                <li>Govt tax
+                    <span>{{ govtTax | currency:'INR':'symbol-narrow'}}</span>
+                </li>
+            </ul>
+            <hr>
+        <p>Total amount</p>
+        <span>{{totalCharge | currency:'INR':'symbol-narrow'}}</span>
+       </div>
+    <button routerLink="/checkout">Proceed to checkout</button>
+</div>

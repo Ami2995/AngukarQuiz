@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Montserrat&family=Open+Sans:wght@300&family=Raleway:wght@300&display=swap');
+*{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: #0f1213;
+    text-decoration: none;
+}
+
+body{
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card{
+    overflow: hidden;
+    border: 0 !important;
+    border-radius: 20px !important;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  .img-left{
+    width: 45%;
+    background: url('../../../assets/images/login.jpg') center;
+    background-size: cover;
+  }
+  
+  .card-body{
+    padding: 2rem;
+  }
+  
+  .title{
+    margin-bottom: 2rem;
+  }
+  
+  .form-outline{
+    position: relative;
+  }
+  
+  .form-outline input{
+    width: 100%;
+    height: 45px;
+    padding-left: 40px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    box-shadow: none;
+    border: 1px solid #00000020;
+    border-radius: 50px;
+    outline: none;
+    background: transparent;
+  }
+  
+  .form-outline span{
+    position: absolute;
+    top: 10px;
+    padding-left: 15px;
+    color: #007bff;
+  }
+  
+  .form-outline input::placeholder{
+    color: black;
+    padding-left: 0px;
+  }
+  
+  .form-outline input:hover{
+    border: 2px solid #ea1014;
+  }
+  
+  .form-outline input:focus::placeholder{
+    color: #454b69;
+  }
+  
+  
+  .form-box button[type="submit"]{
+    margin-top: 10px;
+    height: 50px;
+    width: 40%;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    background: #781313;
+    color: #fff;
+    font-size: 90%;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    padding: 12px;
+  }
+
+  .form-box button:hover{
+    background: #dd0808;
+  }
+
+  .forget-link, .register-link{
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .forget-link:hover, .register-link:hover{
+    color: #420ec8;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+   .msg{
+    font-size: 12px;
+    color: red;
+  }
+  
+  

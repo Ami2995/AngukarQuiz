@@ -1,0 +1,118 @@
+<section class="vh-100 gradient-custom">
+  <div class="container py-4 h-100">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-12 col-lg-9 col-xl-7">
+        <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+          <div class="card-body p-4 p-md-4">
+            <a class="navbar-brand " href="#"><img [src]="imageSrc" [alt]="imageName" width="150px" height="100px"></a>
+            <h3 class="mb-3 pb-2 pb-md-0 mb-md-4">Sign up</h3>
+        
+            <form [formGroup]="registerForm" (ngSubmit)="submitForm()">
+              <div class="row">
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline">
+                    <div *ngIf="submitted && registerForm.controls['firstName'].errors">
+                      <div *ngIf="submitted && registerForm.controls['firstName'].errors['required']">
+                        <p class="msg">first name is required</p>
+                      </div>
+                    </div>
+                    <input formControlName="firstName" [ngClass]="{'is-invalid':submitted && registerForm.controls['firstName'].errors}" type="text" [(ngModel)]="user.firstName" name="firstName" id="firstName" class="form-control form-control-lg" />
+                    <label class="form-label" for="firstName">First Name</label>
+    
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline">
+                    <div *ngIf="submitted && registerForm.controls['lastName'].errors" >
+                      <div *ngIf="submitted && registerForm.controls['lastName'].errors['required']">
+                        <p class="msg">last name is required</p>
+                      </div>
+                    </div>
+                    <input formControlName="lastName" [ngClass]="{'is-invalid':submitted && registerForm.controls['lastName'].errors}" type="text" [(ngModel)]="user.lastName" name="lastName" id="lastName" class="form-control form-control-lg" />
+                    <label class="form-label" for="lastName">Last Name</label>
+                  </div>
+
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-4 pb-2">
+
+                  <div class="form-outline">
+                    <div *ngIf="submitted && registerForm.controls['emailAddress'].errors">
+                      <div *ngIf="submitted && registerForm.controls['emailAddress'].errors['required']">
+                       <p class="msg">email is required</p>
+                      </div>
+                      <div *ngIf="submitted && registerForm.controls['emailAddress'].errors['email']">
+                        <p class="msg">enter valid email</p>
+                       </div>
+                    </div>
+                    <input formControlName="emailAddress" [ngClass]="{'is-invalid':submitted && registerForm.controls['emailAddress'].errors}" type="email" [(ngModel)]="user.emailAddress" name="emailAddress" id="emailAddress" class="form-control form-control-lg" />
+                    <label class="form-label" for="emailAddress">Email</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4 pb-2">
+
+                  <div class="form-outline">
+                    <div *ngIf="submitted && registerForm.controls['phoneNumber'].errors">
+                      <div *ngIf="submitted && registerForm.controls['phoneNumber'].errors['required']">
+                        <p class="msg">mobile number is required</p>
+                      </div>
+                      <div *ngIf="submitted && registerForm.controls['phoneNumber'].errors['minlength']">
+                        <p class="msg">mobile number must contains 10 digit</p>
+                      </div>
+                      <div *ngIf="submitted && registerForm.controls['phoneNumber'].errors['pattern']">
+                        <p class="msg">Enter valid number.</p>
+                      </div>
+                    </div>
+                    <input formControlName="phoneNumber" pattern="[0-9]*" [ngClass]="{'is-invalid':submitted && registerForm.controls['phoneNumber'].errors}" type="tel" [(ngModel)]="user.mobileNumber" name="phoneNumber" id="phoneNumber" class="form-control form-control-lg" />
+                    <label class="form-label" for="phoneNumber">Phone Number</label>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4 pb-2">
+
+                  <div class="form-outline">
+                    <div *ngIf="submitted && registerForm.controls['password'].errors" class="err">
+                      <div *ngIf="submitted && registerForm.controls['password'].errors['required']">
+                        <p class="msg">password is required</p>
+                      </div>
+                      <div *ngIf="submitted && registerForm.controls['password'].errors['minlength']">
+                        <p class="msg">Password must contains atleast 8 characters</p>
+                      </div>
+                    </div>
+                    <input formControlName="password" [ngClass]="{'is-invalid':submitted && registerForm.controls['password'].errors}" type="password" [(ngModel)]="user.password" name="password" id="password" class="form-control form-control-lg" />
+                    <label class="form-label" for="password">Password</label>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4 pb-2">
+                  <div class="form-outline">
+                  <div *ngIf="submitted && registerForm.controls['cpassword'].errors" >
+                    <div *ngIf="submitted && registerForm.controls['cpassword'].errors['required']" class="text-danger">
+                      <p class="msg">password is required</p>
+                    </div>
+                  </div>
+                    <input formControlName="cpassword" [ngClass]="{'is-invalid':submitted && registerForm.controls['cpassword'].errors}" type="password" [(ngModel)]="user.cpassword" name="cpassword"  id="cpassword" class="form-control form-control-lg" />
+                    <label class="form-label" for="cpassword">Confirm Password</label>
+                  </div>
+                  
+
+                </div>
+              </div>
+
+              <div class="pt-2">
+                <input class="btn btn-primary btn-medium" type="submit" value="Submit" />
+              </div>
+
+              <div class="mt=3 pt-3"><p>Already have an account? Click here to <a [routerLink]="'/login'">Login</a></p></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

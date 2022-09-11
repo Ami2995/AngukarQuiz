@@ -1,0 +1,38 @@
+<app-not-found
+    [visible]="!foodData.id"
+    notFoundMessage= "Food not available."
+    resetLinkText= "Back To Home !"
+></app-not-found>
+
+<div *ngIf="foodData.id" class="container">
+  <img [src]="foodData.foodImage" alt="{{ foodData.foodName }}" />
+  <div class="details">
+    <div class="header">
+      <span class="name">
+        {{ foodData.foodName }}
+      </span>
+    </div>
+    <div class="category">
+      <span> {{ foodData.category.categoryName }} </span>
+    </div>
+    <div class="description">
+      {{foodData.foodDescription}}
+    </div>
+    <div>
+      <div class="rating">
+        <ngb-rating class="rate" [max]="5" [(rate)]="foodData.foodRating"
+        [readonly]="true">
+        <ng-template let-fill="fill">
+          <span class="star" [class.filled]="fill === 100" [class.notfilled]="fill === 0">&#9733;</span>
+        </ng-template>
+          </ngb-rating>
+       </div>
+    </div>
+  <div class="cook-time">
+    <span>Time to cook about <strong>🕘{{ foodData.timeToCook }}</strong></span>
+  </div>
+  <div class="price">
+      <span>{{ foodData.foodPrice | currency: "INR":"symbol-narrow" }}</span>
+</div>
+    <button (click)="addToCart()">Add To Cart</button>
+</div>

@@ -1,0 +1,60 @@
+<body>
+  <div class="container" >
+    <div class="row px-3">
+      <div class="col-lg-10 col-xl-10 card flex-row mx-auto px-0">
+        <div class="img-left d-none d-md-flex"></div>
+        <div class="card-body">
+          <h4 class="title text-center mt-4">
+            <img [src]="imageSrc" [alt]="imageName" width="100px">
+          </h4>
+          <form class="form-box px-3" [formGroup]="registerForm" (ngSubmit)="submitForm()">
+            <div class="form-outline">
+              <div *ngIf="submitted && registerForm.controls['emailAddress'].errors">
+                <div *ngIf="submitted && registerForm.controls['emailAddress'].errors['required']">
+                 <p class="msg">* email is required</p>
+                </div>
+                <div *ngIf="submitted && registerForm.controls['emailAddress'].errors['email']">
+                  <p class="msg">enter valid email</p>
+                 </div>
+              </div>
+              <input formControlName="emailAddress" [ngClass]="{'is-invalid':submitted && registerForm.controls['emailAddress'].errors}" type="email" [(ngModel)]="logindata.username" placeholder="Email Address" name="username" id="username" class="form-control form-control-lg" />
+            </div>
+            <div class="form-outline">
+              <div *ngIf="submitted && registerForm.controls['password'].errors" class="err">
+                <div *ngIf="submitted && registerForm.controls['password'].errors['required']">
+                  <p class="msg">* password is required</p>
+                </div>
+                <div *ngIf="submitted && registerForm.controls['password'].errors['minlength']">
+                  <p class="msg">Password must contains atleast 8 characters</p>
+                </div>
+              </div>
+              <input 
+               formControlName="password" [ngClass]="{'is-invalid':submitted && registerForm.controls['password'].errors}" type="password" [(ngModel)]="logindata.password"  name="password" id="password" class="form-control form-control-lg" placeholder="Password" />
+            </div>
+  
+            <div class="text-center mb-3">
+              <button type="submit" class="btn btn-block text-uppercase">
+                Login
+              </button>
+            </div>
+  
+            <div class="text-center">
+              <a href="#" class="forget-link">
+                Forget Password?
+              </a>
+            </div>
+  
+            <hr class="my-4">
+  
+            <div class="text-center mb-2">
+              Don't have an account?
+              <a [routerLink]="'/signup'" class="register-link">
+                Register here
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

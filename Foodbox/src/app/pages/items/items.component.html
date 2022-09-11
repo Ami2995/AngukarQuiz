@@ -1,0 +1,39 @@
+<div class="container">
+    <h3>FOOD-ITEMS</h3>
+    </div>
+    <div class="button-primary">
+        <button class="btn" routerLink="/admin-dashboard/add-items"> <fa-icon id="icon" [icon]="add"></fa-icon> Add Items</button>
+    </div>
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Food ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price </th>
+            <th scope="col">Cooking Time</th>
+            <th scope="col">Description</th>
+            <th scope="col">Image</th>
+            <th scope="col">Category</th>
+            <th scope="col">Available</th>
+            <th scope="col">Update</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let f of food">
+            <td>{{f.id}}</td>
+            <td>{{f.foodName}}</td>
+            <td>{{f.foodPrice | currency:'INR':'symbol-narrow'}}</td>
+            <td>{{f.timeToCook}}</td>
+            <td>{{f.foodDescription}}</td>
+            <td><img [src]="f.foodImage" alt="" width="150px"></td>
+            <td>{{f.category.categoryName}}</td>
+            <td>{{f.available}}</td>
+            <td><button  class="button" [routerLink]="'/admin-dashboard/update-items/' +f.id"><fa-icon class="faicon" [icon]="update"></fa-icon></button></td>
+            <td><button class="button" (click)="deleteItem(f.id)"><fa-icon class="faicon" [icon]="delete"></fa-icon></button></td>    
+          </tr>
+        </tbody>
+      </table>
+
+
+     

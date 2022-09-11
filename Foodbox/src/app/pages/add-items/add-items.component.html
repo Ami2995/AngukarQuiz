@@ -1,0 +1,67 @@
+<div class="container">
+    <h3>Add New Food Item</h3>
+    <form #productForm="ngForm"  (ngSubmit)="addFoodItems(productForm)">
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input
+                    type="text" class="form-control" required  name="fooName" id="name"
+                         [(ngModel)] = "foodData.foodName"  placeholder="Enter name">
+                </div>
+                <div class="form-group">
+                    <label for="category">Select Category</label>
+                    <select
+                     class="form-select" [(ngModel)]="foodData.category.id" #category name="category">
+                     <option [ngValue]="null" [disabled]="true" selected > - - - - -Select Category- - - - -</option>  
+                     <option *ngFor="let cat of categories" [value]="cat.id" >
+                        {{cat.categoryName}}
+                       </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="price">Price</label>
+                    <input placeholder="Enter Price"
+                    type="number" class="form-control"   name="foodPrice" id="price"
+                    [(ngModel)] = "foodData.foodPrice">
+                    
+                </div>
+                <div class="form-group">
+                    <label for="price">Cooking Time</label>
+                    <input placeholder="Enter Time"
+                    type="text" class="form-control"   name="foodTime" id="time"
+                    [(ngModel)] = "foodData.timeToCook" >
+                    
+                </div>
+                <div class="form-group">
+                    <label for="rating">Cooking Time</label>
+                    <input placeholder="Enter rating"
+                    type="number" class="form-control" [max]="5"   name="foodRating" id="rating"
+                    [(ngModel)] = "foodData.foodRating" >
+                    
+                </div>
+                <div class="form-check form-switch">
+                    <label class="form-check-label " for="flexSwitchCheckChecked">Status</label>        
+                    <input [(ngModel)]="foodData.available" class="form-check-input checkbox" type="checkbox" role="switch" id="flexSwitchCheckChecked" name="status" checked>
+                  </div>
+           
+                <div class="form-group">
+                    <label for="description">Product Description</label>
+                    <textarea class="form-control" [(ngModel)] = "foodData.foodDescription" rows="5"  name="description" id="description"></textarea>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <label for="image">Food Image</label>
+                <div class="custom-file">
+                    
+                    <input [(ngModel)]="foodData.foodImage" type="file" accept="image/*" name="images" id="images" (change)="onSelectFile($event)" />
+                    <img width="200px" *ngIf="url" [src]="url" class="image my-2">
+                </div>
+             
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+

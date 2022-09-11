@@ -1,0 +1,23 @@
+<div class="container">
+<h3>FOOD-CATEGORIES</h3>
+</div>
+<button class="btn btn-lg " routerLink="/admin-dashboard/add-category"><fa-icon id="icon" [icon]="add"></fa-icon> Add Category</button>
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Category ID</th>
+        <th scope="col">Category Name</th>
+        <th scope="col">Update</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cat of category">
+        <td>{{cat.id}}</td>
+        <td>{{cat.categoryName}}</td>
+        <td><button  class="button" (click)="updateCategory(cat.id)"><fa-icon class="faicon" [icon]="update"></fa-icon></button></td>
+        <td ><button class="button" (click)="deleteCategory(cat.id)"><fa-icon class="faicon" [icon]="delete"></fa-icon></button></td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,16 @@
+<div class="container m-2 p-2">
+    <div class="heading">
+        Add New Category
+    </div>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group row text-center">
+            <label for="categoryName"  class="col-sm-2 col-form-label">Category Name</label>
+            <div class="col-sm-4">
+              <input  type="text" [(ngModel)]="category.categoryName"  class="form-control" name="categoryName" id="categoryName" placeholder="Enter Name">
+            </div>
+          </div>
+          <div class="container">
+            <button class="btn" >Save</button>
+          </div>
+    </form>
+</div>

@@ -1,0 +1,18 @@
+<div class="card" style="width: 12rem;">
+    <div class="subheading mt-3 text-center">
+       <img class="profile-img" [src]="imageSrc" [alt]="imageName" width="100px">
+       <h5 class="text mt-2">
+        Hello, Admin
+       </h5>
+    </div>
+    <div class="list-group m-2 p-2">
+    <button routerLink="/admin-dashboard/category"  type="button" class="list-group-item list-group-item-action">
+        <fa-icon class="icon p-2" [icon]="category"></fa-icon>Category</button>
+    <button routerLink="/admin-dashboard/food"  type="button" class="list-group-item list-group-item-action">
+        <fa-icon class="icon p-2" [icon]="product"></fa-icon>Items</button>
+    <button routerLink="/admin-dashboard/profile" type="button" class="list-group-item list-group-item-action">
+        <fa-icon class="icon p-2" [icon]="profile"></fa-icon>Profile</button>
+    <button type="button" class="list-group-item list-group-item-action">
+        <fa-icon class="icon p-2" [icon]="setting"></fa-icon>Settings</button>
+    </div>
+</div>

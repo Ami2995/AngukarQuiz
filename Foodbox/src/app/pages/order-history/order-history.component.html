@@ -1,0 +1,23 @@
+<div class="container">
+    <h3>Your Orders</h3>
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Order ID</th>
+            <th scope="col">Order Tracking Number</th>
+            <th scope="col">Bill Amount</th>
+            <th scope="col">Total Quantity</th>
+            <th scope="col">Purchase Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let order of orders">
+            <td>{{order.id}}</td>
+            <td>{{order.orderTrackingNumber}}</td>
+            <td>{{order.totalPrice | currency: "INR":"symbol-narrow"}}</td>
+            <td>{{order.totalQuantity}}</td>
+            <td>{{order.dateCreated | date:'yyyy-MM-dd'}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>

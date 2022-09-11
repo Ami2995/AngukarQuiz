@@ -1,0 +1,26 @@
+<p>Profile Details</p>
+<table class="table table-bordered ">
+    
+    <tbody>
+        <tr>
+            <td class="key">Name</td>
+            <td>{{user.firstName}} {{user.lastName}}</td>
+        </tr>
+      <tr>
+        <td class="key">Username</td>
+        <td>{{user.username}}</td>
+      </tr>
+      <tr>
+        <td class="key">Mobile</td>
+        <td>{{user.mobileNumber}}</td>
+      </tr>
+      <tr>
+        <td class="key">Role</td>
+        <td>{{user.authorities[0].authority}}</td>
+      </tr>
+      <tr>
+        <td class="key">Status</td>
+        <td>{{user.enabled ? "ACTIVE" : "NOT ACTIVE"}}</td>
+      </tr>
+    </tbody>
+  </table>

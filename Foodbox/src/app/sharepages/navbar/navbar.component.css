@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Montserrat&family=Open+Sans:wght@300&family=Raleway:wght@300&display=swap');
+
+  * {
+    padding: 0;
+    margin: 3px;
+    box-sizing: border-box;
+}
+.navbar{
+  height: 60px;
+}
+.navbar li, a{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #0f1213;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 10;
+}
+.topbar li, a, p, span { 
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #0f1213;
+  text-decoration: none;
+}
+.topbar{
+  display: flex;
+  align-items: center;
+  padding: 10px 25px;
+  justify-content: space-between;
+}
+
+.topbar ul{
+  list-style: none;
+  display: flex;
+}
+
+.topbar li{
+  margin-left:25px;
+}
+
+.btn{
+  margin-top: 5px;
+    height: 50px;
+    width:100px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    color: #000000;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    padding: 12px;
+}
+
+
+.btn:hover{
+  color: #781313;
+  font-size: 13px;
+  font-weight: bolder;
+}
+
+.icn{
+  font-size: 22px;
+  color: #781313;
+}
+
+.icn:hover{
+  font-size: 28px;
+  color: #dc2020;
+}
+

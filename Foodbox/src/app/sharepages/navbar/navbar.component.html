@@ -1,0 +1,44 @@
+<div class="topbar">
+  <span><fa-icon [icon]="emailIcon"></fa-icon>hello@foodbox.com
+  <fa-icon [icon]="phoneIcon"></fa-icon>+910001805681</span>
+  
+  <ul>
+    <p>Opening Hours : 8:00am - 11:30pm</p>
+    <li><a href="#"><fa-icon [icon]="fbIcon"></fa-icon></a></li>
+    <li><a href="#"><fa-icon [icon]="twitIcon"></fa-icon></a></li>
+    <li><a href="#"><fa-icon [icon]="instaIcon"></fa-icon></a></li>
+  </ul>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+    <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]="'/home'"><img class="img-logo" [src]="imageSrc" [alt]="imageName" width="120px" height="60px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav" >
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <button *ngIf="login.isLoggedIn()" class="nav-link btn" [routerLink]="'/home'" >Home</button>
+          </li>
+          <li class="nav-item">
+            <button *ngIf="!login.isLoggedIn()" class="nav-link btn" [routerLink]="'/login'" ><fa-icon [icon]="loginIcon"></fa-icon>Login</button>
+          </li>
+          <li class="nav-item">
+            <button *ngIf="!login.isLoggedIn()" class="nav-link btn" [routerLink]="'/signup'" ><fa-icon [icon]="signUpIcon"></fa-icon>Signup</button>
+          </li>
+          <li class="nav-item">
+            <button *ngIf="login.isLoggedIn()" class="nav-link btn"  [routerLink]="'/orders'" >Order</button>
+          </li>
+          <li class="nav-item">
+            <button (click)="logout()"   *ngIf="login.isLoggedIn()" class="nav-link btn" ><fa-icon [icon]="logoutIcon"></fa-icon>Logout</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link btn" *ngIf="login.isLoggedIn()"  [routerLink]="'/cart'"><fa-icon class="icn" [icon]="cartIcon"></fa-icon><span *ngIf="cartQuantity">
+              {{cartQuantity}}
+            </span></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

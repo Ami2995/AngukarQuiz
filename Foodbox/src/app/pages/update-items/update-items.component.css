@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Montserrat&family=Open+Sans:wght@300&family=Raleway:wght@300&display=swap');
+*{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #0f1213;
+    text-decoration: none;
+}
+
+h3{
+    font-size: 35px;
+    font-weight: bolder;
+    margin: 15px 0;
+}
+
+.btn{
+    margin:20px 5px ;
+    height: 50px;
+    width:18%;
+    background-color: rgb(133, 18, 18);
+    color: white;
+    border-radius: 30px;
+}
+
+.btn:hover{
+    background-color: red;
+}
+
+input{
+    color: rgb(34, 2, 37);
+}
+ .selectedo{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+#flexSwitchCheckChecked{
+    background-color: rgb(100, 4, 4);
+    width: 35px;
+}
+
+.msg {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: red;
+ }
+ 
+label {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+.form-group{
+    margin-bottom: 15px
+}
+
